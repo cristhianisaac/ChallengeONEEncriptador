@@ -1,5 +1,5 @@
 function encriptar(texto) {
-    var texto_encriptado = '';
+  let texto_encriptado = '';
     for (let i = 0; i < texto.length; i++) {
       const letra = texto[i];
       switch (letra) {
@@ -26,12 +26,22 @@ function encriptar(texto) {
     return texto_encriptado;
   }
   
-  function desencriptar(texto) {
-    var texto_encriptado = texto;
-    texto_desencriptado = texto_encriptado.replace("enter", 'e');
-    texto_desencriptado = texto_desencriptado.replace("imes", 'i');
-    texto_desencriptado = texto_desencriptado.replace("ai", 'a');
-    texto_desencriptado = texto_desencriptado.replace("ober", 'o');
-    texto_desencriptado = texto_desencriptado.replace("ufat", 'u');
+function desencriptar(texto) {
+  let  texto_encriptado = texto;
+    texto_desencriptado = texto_encriptado.replace(/enter/g, 'e');
+    texto_desencriptado = texto_desencriptado.replace(/imes/g, 'i');
+    texto_desencriptado = texto_desencriptado.replace(/ai/g, 'a');
+    texto_desencriptado = texto_desencriptado.replace(/ober/g, 'o');
+    texto_desencriptado = texto_desencriptado.replace(/ufat/g, 'u');
     return texto_desencriptado;
-  }
+}
+
+function encripta_click(){
+  var entrada = document.getElementById("entrada").value;
+  document.getElementById("salida").innerHTML = encriptar(entrada);
+}
+
+function desencripta_click(){
+  var entrada = document.getElementById("entrada").value;
+  document.getElementById("salida").innerHTML = desencriptar(entrada);
+}
