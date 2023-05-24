@@ -1,0 +1,34 @@
+body{
+    background-color: #f3f5fc;
+}
+main *{
+    color: #0a3871;
+}
+#input label{
+    color: #8c9299;
+}
+
+#encriptar{
+    background-color: #072b61;
+    border: solid 1px #0a3871;
+    border-radius: 5px;
+    color: #ffffff;
+}
+    #encriptar:focus {
+        outline: none;
+    }
+#desencriptar{
+    background-color: #d8dfe8;
+    border: solid 1px #0a3871;
+    border-radius: 5px;
+    color: #0a3871;
+}
+    #desencriptar:focus {
+        outline: none;
+    }
+
+#output{
+    background-color: #ffffff;
+    border: solid 1px #000;
+    border-radius: 15px;
+}
