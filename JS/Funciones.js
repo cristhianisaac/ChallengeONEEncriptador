@@ -1,5 +1,5 @@
 function encriptar(texto) {
-    let texto_encriptado = '';
+    var texto_encriptado = '';
     for (let i = 0; i < texto.length; i++) {
       const letra = texto[i];
       switch (letra) {
@@ -26,3 +26,12 @@ function encriptar(texto) {
     return texto_encriptado;
   }
   
+  function desencriptar(texto) {
+    var texto_encriptado = texto;
+    texto_desencriptado = texto_encriptado.replace("enter", 'e');
+    texto_desencriptado = texto_desencriptado.replace("imes", 'i');
+    texto_desencriptado = texto_desencriptado.replace("ai", 'a');
+    texto_desencriptado = texto_desencriptado.replace("ober", 'o');
+    texto_desencriptado = texto_desencriptado.replace("ufat", 'u');
+    return texto_desencriptado;
+  }
