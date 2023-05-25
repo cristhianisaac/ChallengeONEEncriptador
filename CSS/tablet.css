@@ -1,4 +1,4 @@
-@media (max-width:1020px)  {
+@media (min-width:801px)  {
     html,body {
         width: 100%;
         background-color: #f3f5fc;
