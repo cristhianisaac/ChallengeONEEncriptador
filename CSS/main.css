@@ -74,6 +74,12 @@ main *{
     color: #000;
 }
 
+    #salida{
+        font-weight: italic;
+    }
+    #aviso{
+        font-size: 15px;
+    }
 #copiar{
     display: none;
 }
