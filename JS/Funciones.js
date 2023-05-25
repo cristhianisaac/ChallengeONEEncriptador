@@ -27,13 +27,13 @@ function encriptar(texto) {
   }
   
 function desencriptar(texto) {
-  let texto_desencriptado = texto;
-    texto_desencriptado = texto_desencriptado.replace(/enter/g, 'e');
-    texto_desencriptado = texto_desencriptado.replace(/imes/g, 'i');
-    texto_desencriptado = texto_desencriptado.replace(/ai/g, 'a');
-    texto_desencriptado = texto_desencriptado.replace(/ober/g, 'o');
-    texto_desencriptado = texto_desencriptado.replace(/ufat/g, 'u');
-    return texto_desencriptado;
+  var texto_desencriptado = texto;
+  texto_desencriptado = texto_desencriptado.replace(/enter/g, 'e');
+  texto_desencriptado = texto_desencriptado.replace(/imes/g, 'i');
+  texto_desencriptado = texto_desencriptado.replace(/ai/g, 'a');
+  texto_desencriptado = texto_desencriptado.replace(/ober/g, 'o');
+  texto_desencriptado = texto_desencriptado.replace(/ufat/g, 'u');
+  return texto_desencriptado;
 }
 
 function encripta_click(){
