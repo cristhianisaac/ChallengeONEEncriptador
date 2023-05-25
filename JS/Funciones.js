@@ -27,7 +27,7 @@ function encriptar(texto) {
   }
   
 function desencriptar(texto) {
-  var texto_desencriptado = texto;
+  let texto_desencriptado = texto;
     texto_desencriptado = texto_desencriptado.replace(/enter/g, 'e');
     texto_desencriptado = texto_desencriptado.replace(/imes/g, 'i');
     texto_desencriptado = texto_desencriptado.replace(/ai/g, 'a');
