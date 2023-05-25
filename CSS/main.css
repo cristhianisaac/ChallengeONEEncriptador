@@ -75,9 +75,10 @@ main *{
 }
 
     #salida{
-        font-style: italic;
+        font-style: normal;
     }
     #aviso{
+        font-style: italic;
         font-size: 15px;
     }
 #copiar{
