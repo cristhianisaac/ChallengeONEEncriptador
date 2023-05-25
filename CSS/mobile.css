@@ -69,6 +69,10 @@
         margin-left: 10%;
         color: #000;
     }
+    #output img{
+        width: 0px;
+        height: 0px;
+    }
     #salida{
         font-size: 20px;
         font-weight: normal;
