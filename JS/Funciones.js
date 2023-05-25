@@ -1,6 +1,6 @@
 function encriptar(texto) {
-  let texto_encriptado = '';
-    for (let i = 0; i < texto.length; i++) {
+  var texto_encriptado = '';
+    for (var i = 0; i < texto.length; i++) {
       const letra = texto[i];
       switch (letra) {
         case 'e':
@@ -27,7 +27,7 @@ function encriptar(texto) {
   }
   
 function desencriptar(texto) {
-  let  texto_encriptado = texto;
+  bar texto_encriptado = texto;
     texto_desencriptado = texto_encriptado.replace(/enter/g, 'e');
     texto_desencriptado = texto_desencriptado.replace(/imes/g, 'i');
     texto_desencriptado = texto_desencriptado.replace(/ai/g, 'a');
