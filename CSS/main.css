@@ -75,6 +75,7 @@ main *{
 }
 
     #salida{
+    padding-top: 5%;
         font-style: normal;
 font-weight: 500;
         word-wrap: break-word;
