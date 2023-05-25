@@ -80,6 +80,7 @@ font-weight: 500;
         word-wrap: break-word;
 white-space: pre-wrap;
 word-break: break-word;
+  overflow: auto;
     }
     #aviso{
         font-style: italic;
