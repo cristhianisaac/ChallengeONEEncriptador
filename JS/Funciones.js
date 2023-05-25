@@ -48,7 +48,7 @@ function encripta_click(){
   }
   else{
     document.getElementById("salida").innerHTML = salida;
-    document.getElementById("salida").style.height = "70%";
+    document.getElementById("salida").style.height = "80%";
     document.getElementById("copiar").style.display = "inline-table";
     document.getElementById("img").style.display = "none";
     document.getElementById("aviso").style.display = "none";
@@ -67,7 +67,7 @@ function desencripta_click(){
   }
   else{
     document.getElementById("salida").innerHTML = salida;
-    document.getElementById("salida").style.height = "70%";
+    document.getElementById("salida").style.height = "80%";
     document.getElementById("copiar").style.display = "inline-table";
     document.getElementById("img").style.display = "none";
     document.getElementById("aviso").style.display = "none";
