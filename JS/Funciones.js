@@ -51,7 +51,6 @@ function encripta_click(){
     document.getElementById("img").style.display = "none";
     document.getElementById("aviso").style.display = "none";
   }
-  reloadCSS();
 }
 
 function desencripta_click(){
@@ -69,7 +68,6 @@ function desencripta_click(){
     document.getElementById("img").style.display = "none";
     document.getElementById("aviso").style.display = "none";
   }
-  reloadCSS();
 }
 
 function copyToClipboard() {
@@ -81,16 +79,6 @@ function copyToClipboard() {
     tempTextarea.select();
     document.execCommand('copy');
     document.body.removeChild(tempTextarea);
-  }
-}
-
-function reloadCSS() {
-  const links = document.getElementsByTagName('link');
-  for (let i = 0; i < links.length; i++) {
-    if (links[i].rel === 'stylesheet') {
-      const href = links[i].href;
-      links[i].href = href + '?v=' + new Date().getTime();
-    }
   }
 }
 
