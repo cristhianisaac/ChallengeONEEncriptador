@@ -9,26 +9,33 @@
   <link rel="stylesheet" href="CSS/mobile.css">
   <link rel="stylesheet" href="CSS/tablet.css">
   <script type="text/javascript" src="JS/Funciones.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
   <main>
-    <h1>a</h1>
+    <div id="left">
+      <h1 id="letrero">a</h1>
     <section id="input">
         <textarea id="entrada" placeholder="Ingrese el texto aqui..."></textarea>
-        <label>Solo letras minuscúlas y sin acentos</label>
     </section>
 
-    <section id="button">
-        <button id="encriptar" onclick="encripta_click()">Encripta</button>
-        <button id="desencriptar" onclick="desencripta_click()">Desencripta</button>
+    <section id="botones">
+      <label>&#10059;Solo letras minuscúlas y sin acentos</label>
+        <button class="button" id="encriptar" onclick="encripta_click()">Encripta</button>
+        <button class="button" id="desencriptar" onclick="desencripta_click()">Desencripta</button>
     </section>
 
-    <section id="output">
-        <img>
-        <h1 id="salida">Ningun mensaje fue encontrado</h1>
-        <p>Ingrese el texto que desea encriptar o desencriptar</p>
-        <button>Copiar</button>
-    </section>
+    </div>
+    <div id="right">
+      <section id="output">
+          <img id="img" src="IMG/1.png">
+          <h1 id="salida">Ningun mensaje fue encontrado</h1>
+          <p id="aviso">Ingrese el texto que desea encriptar o desencriptar</p>
+          <button class="button" id="copiar" onclick="copyToClipboard()">Copiar</button>
+      </section>
+    </div>
   </main>
 
 </body>

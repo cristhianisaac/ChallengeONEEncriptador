@@ -38,10 +38,46 @@ function desencriptar(texto) {
 
 function encripta_click(){
   var entrada = document.getElementById("entrada").value;
-  document.getElementById("salida").innerHTML = encriptar(entrada);
+  var salida = encriptar(entrada);
+  if(salida===''){
+    document.getElementById("salida").innerHTML = "Ningun mensaje fue encontrado";
+    document.getElementById("copiar").style.display = "none";
+    document.getElementById("img").style.display = "block";
+    document.getElementById("aviso").style.display = "block";
+  }
+  else{
+    document.getElementById("salida").innerHTML = salida;
+    document.getElementById("copiar").style.display = "block";
+    document.getElementById("img").style.display = "none";
+    document.getElementById("aviso").style.display = "none";
+  }
 }
 
 function desencripta_click(){
   var entrada = document.getElementById("entrada").value;
-  document.getElementById("salida").innerHTML = desencriptar(entrada);
+  var salida = desencriptar(entrada);
+  if(salida===''){
+    document.getElementById("salida").innerHTML = "Ningun mensaje fue encontrado";
+    document.getElementById("copiar").style.display = "none";
+    document.getElementById("img").style.display = "block";
+    document.getElementById("aviso").style.display = "block";
+  }
+  else{
+    document.getElementById("salida").innerHTML = salida;
+    document.getElementById("copiar").style.display = "block";
+    document.getElementById("img").style.display = "none";
+    document.getElementById("aviso").style.display = "none";
+  }
+}
+
+function copyToClipboard() {
+  const element = document.getElementById("salida");
+  if (element) {
+    const tempTextarea = document.createElement('textarea');
+    tempTextarea.value = element.innerHTML;
+    document.body.appendChild(tempTextarea);
+    tempTextarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextarea);
+  }
 }
