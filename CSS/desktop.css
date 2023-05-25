@@ -107,6 +107,7 @@ main *{
     }
 #output img{
     margin-top:25%;
+    width: 80%;
 }
 
 #copiar{
