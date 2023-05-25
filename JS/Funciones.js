@@ -42,12 +42,12 @@ function encripta_click(){
   if(salida===''){
     document.getElementById("salida").innerHTML = "Ningun mensaje fue encontrado";
     document.getElementById("copiar").style.display = "none";
-    document.getElementById("img").style.display = "block";
-    document.getElementById("aviso").style.display = "block";
+    document.getElementById("img").style.display = "inline-table";
+    document.getElementById("aviso").style.display = "inline-table";
   }
   else{
     document.getElementById("salida").innerHTML = salida;
-    document.getElementById("copiar").style.display = "block";
+    document.getElementById("copiar").style.display = "inline-table";
     document.getElementById("img").style.display = "none";
     document.getElementById("aviso").style.display = "none";
   }
@@ -60,12 +60,12 @@ function desencripta_click(){
   if(salida===''){
     document.getElementById("salida").innerHTML = "Ningun mensaje fue encontrado";
     document.getElementById("copiar").style.display = "none";
-    document.getElementById("img").style.display = "block";
-    document.getElementById("aviso").style.display = "block";
+    document.getElementById("img").style.display = "inline-table";
+    document.getElementById("aviso").style.display = "inline-table";
   }
   else{
     document.getElementById("salida").innerHTML = salida;
-    document.getElementById("copiar").style.display = "block";
+    document.getElementById("copiar").style.display = "inline-table";
     document.getElementById("img").style.display = "none";
     document.getElementById("aviso").style.display = "none";
   }
