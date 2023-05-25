@@ -98,7 +98,13 @@ main *{
     margin-left: 10%;
     color: #000;
 }
-
+    #salida{
+        font-size: 25px;
+        font-weight: normal;
+    }
+    #aviso{
+        font-size: 20px;
+    }
 #output img{
     margin-top:25%;
 }
