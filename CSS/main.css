@@ -76,6 +76,7 @@ main *{
 
     #salida{
         font-style: normal;
+font-weight: 500;
     }
     #aviso{
         font-style: italic;
