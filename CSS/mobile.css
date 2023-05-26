@@ -1,6 +1,6 @@
 @media (min-width:0px) and (max-width:800px)  {
-    html,body {
-        width: 100%;
+    body {
+        width: 95%;
         background-color: #f3f5fc;
      }
     

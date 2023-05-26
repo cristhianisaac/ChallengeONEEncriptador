@@ -1,3 +1,13 @@
+var Input = document.getElementById("entrada");
+var Output = document.getElementById("salida");
+
+Input.addEventListener("input", function(event) {
+  var inputText = event.target.value;
+  var lowercaseText = inputText.toLowerCase();
+  var cleanedText = lowercaseText.replace(/[^a-z\s]/g, "");
+  event.target.value = cleanedText;
+});
+
 function encriptar(texto) {
   var texto_encriptado = '';
     for (var i = 0; i < texto.length; i++) {
@@ -37,52 +47,77 @@ function desencriptar(texto) {
 }
 
 function encripta_click(){
-  var entrada = document.getElementById("entrada").value;
-  var salida = encriptar(entrada);
-  if(salida===''){
-    document.getElementById("salida").innerHTML = "Ningun mensaje fue encontrado";
-    document.getElementById("salida").style.height = "auto";
-    document.getElementById("copiar").style.display = "none";
-    document.getElementById("img").style.display = "inline-table";
-    document.getElementById("aviso").style.display = "inline-table";
-  }
-  else{
-    document.getElementById("salida").innerHTML = salida;
-    document.getElementById("salida").style.height = "80%";
-    document.getElementById("copiar").style.display = "inline-table";
-    document.getElementById("img").style.display = "none";
-    document.getElementById("aviso").style.display = "none";
-  }
+  var entrada = Input.value;
+  hideControls();
+  if(entrada.replace(/ /g, '')!==''){
+    if(validarTexto(entrada)){
+      var salida = encriptar(entrada);
+      Input.value = '';
+      Output.innerHTML = salida;
+      showControls();
+    }
+    else{
+      alerta();
+    }
+  }  
 }
 
 function desencripta_click(){
-  var entrada = document.getElementById("entrada").value;
-  var salida = desencriptar(entrada);
-  if(salida===''){
-    document.getElementById("salida").innerHTML = "Ningun mensaje fue encontrado";
-    document.getElementById("salida").style.height = "auto";
-    document.getElementById("copiar").style.display = "none";
-    document.getElementById("img").style.display = "inline-table";
-    document.getElementById("aviso").style.display = "inline-table";
-  }
-  else{
-    document.getElementById("salida").innerHTML = salida;
-    document.getElementById("salida").style.height = "80%";
-    document.getElementById("copiar").style.display = "inline-table";
-    document.getElementById("img").style.display = "none";
-    document.getElementById("aviso").style.display = "none";
-  }
+  var entrada = Input.value;
+  hideControls();
+  if(entrada.replace(/ /g, '')!==''){
+    if(validarTexto(entrada)){
+      var salida = desencriptar(entrada);
+      Input.value = '';
+      Output.innerHTML = salida;
+      showControls();
+    }
+    else{
+      alerta();
+    }
+  } 
 }
 
 function copyToClipboard() {
-  const element = document.getElementById("salida");
-  if (element) {
     const tempTextarea = document.createElement('textarea');
-    tempTextarea.value = element.innerHTML;
+    tempTextarea.value = Output.innerHTML;
     document.body.appendChild(tempTextarea);
     tempTextarea.select();
     document.execCommand('copy');
     document.body.removeChild(tempTextarea);
-  }
+    hideControls();
+    Swal.fire({
+      icon: 'succes',
+      title: 'Texto copiado...',
+      text: 'El mensaje descubierto ha sido copiado!'
+    });
 }
 
+function validarTexto(texto) {
+  var regex = /^[a-z\s]+$/;
+  return regex.test(texto);
+}
+
+function hideControls(){
+  
+  Output.innerHTML = "Ningun mensaje fue encontrado";
+  Output.style.height = "auto";
+  document.getElementById("copiar").style.display = "none";
+  document.getElementById("img").style.display = "inline-table";
+  document.getElementById("aviso").style.display = "inline-table";
+}
+
+function showControls(){
+  Output.style.height = "80%";
+  document.getElementById("copiar").style.display = "inline-table";
+      document.getElementById("img").style.display = "none";
+      document.getElementById("aviso").style.display = "none";
+}
+
+function alerta(){
+  Swal.fire({
+    icon: 'error',
+    title: 'Información con errores...',
+    text: 'Solo se aceptan letras minusculas y espacios, sin caracteres especiales!'
+  });
+}
